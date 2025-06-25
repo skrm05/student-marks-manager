@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+input {
+  margin: 5px;
+  padding: 5px;
+}
+
+table {
+  width: 50%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+

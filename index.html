@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="studentApp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Marks Manager</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body ng-controller="StudentController">
+    <h2 class="heading">🎓 Student Marks Manager</h2>
+
+    <div>
+      <input type="text" placeholder="Enter Name" ng-model="student.name" />
+      <input type="number" placeholder="Enter Marks" ng-model="student.marks" />
+      <button ng-click="addStudent()">Add Student</button>
+    </div>
+    <hr />
+    <h3 style="text-decoration: underline">📋 Student List</h3>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="s in students">
+        <td>{{ s.name }}</td>
+        <td>{{ s.marks }}</td>
+        <td><button ng-click="removeStudent($index)">Delete</button></td>
+      </tr>
+    </table>
+
+    <h3>📊 Average Marks: {{ getAverage() }}</h3>
+
+    <script src="app.js"></script>
+  </body>
+</html>
